@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
 
-
     public static UIManager instance;
 
     public GameObject StartMenu;
@@ -14,6 +13,9 @@ public class UIManager : MonoBehaviour
 
     public InputField ChatInputBox;
     [SerializeField] private Text chatText;
+
+    public Dropdown channelDropDown;
+    private int channelIndex;
     
 
     private void Awake()
@@ -27,6 +29,10 @@ public class UIManager : MonoBehaviour
             Debug.Log("Instance of UIManager alreadyt exists");
             Destroy(this);
         }
+        if(channelDropDown != null)
+        {
+            InititalizeDropDown();
+        }
 
     }
 
@@ -39,16 +45,58 @@ public class UIManager : MonoBehaviour
 
     public void SendWorldChat()
     {
-        ClientSend.SendWorldChat(ChatInputBox.text.ToString());
+        ClientSend.SendWorldChat(channelIndex,ChatInputBox.text.ToString());
+        chatText.color = ChannelColor(channelIndex);
         chatText.text += $"\n{Client.instance.myId}: {ChatInputBox.text.ToString()}";
         ChatInputBox.text = "";
     }
 
-    public void ReceiveWorldChat(int _id, string _msg)
+    public void ReceiveWorldChat(int _id,int _channel, string _msg)
     {
+        chatText.color = ChannelColor(_channel);
         chatText.text += $"\n{_id}: {_msg}"; 
     }
 
 
+
+
+
+
+    ////////
+    
+    public Color ChannelColor(int i)
+    {
+        switch (i)
+        {
+            case 0:
+                return Color.black;
+                break;
+            case 1:
+                return Color.red;
+                break;
+            default:
+                return Color.yellow;
+                break;
+
+        }
+    }
+
+    public void OnChannelChange(int index)
+    {
+        channelIndex = index;
+
+        switch (index) 
+        {
+            
+        }
+
+    }
+
+    public void InititalizeDropDown()
+    {
+        channelIndex = 0;
+        List<string> channelNames = new List<string>(System.Enum.GetNames(typeof(ChatChannel)));
+        channelDropDown.AddOptions(channelNames);
+    }
   
 }

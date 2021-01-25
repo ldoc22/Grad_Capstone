@@ -20,10 +20,11 @@ public enum ServerPackets
     spawnProjectile,
     projectilePosition,
     projectileExplosion,
-    worldChatRecieve
-   
+    worldChatRecieve 
 
 }
+
+
 
 /// <summary>Sent from client to server.</summary>
 public enum ClientPackets
@@ -33,6 +34,13 @@ public enum ClientPackets
     playerShoot,
     playerThrowItem,
     worldChat
+}
+
+public enum ChatChannel
+{
+    World,
+    LFF,
+    Social
 }
 
 public class Packet : IDisposable

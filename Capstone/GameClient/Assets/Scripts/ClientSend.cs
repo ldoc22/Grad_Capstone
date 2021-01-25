@@ -66,11 +66,12 @@ public class ClientSend : MonoBehaviour
 
 
 
-    public static void SendWorldChat(string _msg)
+    public static void SendWorldChat(int _channel, string _msg)
     {
         using (Packet _packet = new Packet((int)ClientPackets.worldChat))
         {
             _packet.Write(Client.instance.myId);
+            _packet.Write(_channel);
             _packet.Write(_msg);
 
             SendUDPData(_packet);

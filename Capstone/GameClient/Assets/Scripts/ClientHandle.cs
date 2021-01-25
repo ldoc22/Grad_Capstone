@@ -126,8 +126,9 @@ public class ClientHandle : MonoBehaviour
 
         Debug.Log("message recieved");
         int _id = _packet.ReadInt();
+        int _channel = _packet.ReadInt();
         string _msg = _packet.ReadString();
-        UIManager.instance.ReceiveWorldChat(_id,_msg);
+        UIManager.instance.ReceiveWorldChat(_id,_channel,_msg);
     }
 
    

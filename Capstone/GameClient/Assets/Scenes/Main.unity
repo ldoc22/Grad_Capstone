@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &64757227 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8551513206026307332, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
+  m_PrefabInstance: {fileID: 4322488061195509281}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0b652f32a2cc243917e4028fa0f046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &85105894 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4322488061246980807, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
@@ -929,6 +940,7 @@ MonoBehaviour:
   usernameField: {fileID: 2107462276}
   ChatInputBox: {fileID: 85105894}
   chatText: {fileID: 2097950989}
+  channelDropDown: {fileID: 64757227}
 --- !u!114 &1063737614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2034,7 +2046,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4322488059231792938, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 6.601166
+      value: 6.6011386
       objectReference: {fileID: 0}
     - target: {fileID: 4322488059231792938, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2215,6 +2227,54 @@ PrefabInstance:
     - target: {fileID: 4322488060982147396, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322488061246980807, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1063737613}
+    - target: {fileID: 4322488061246980807, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322488061246980807, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SendWorldChat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322488061246980807, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8551513206026307332, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
+      propertyPath: m_Options.m_Options.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8551513206026307332, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1063737613}
+    - target: {fileID: 8551513206026307332, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8551513206026307332, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnChannelChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 8551513206026307332, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8551513206026307332, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8551513206026307332, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
+      propertyPath: m_Options.m_Options.Array.data[0].m_Text
+      value: Option C
+      objectReference: {fileID: 0}
+    - target: {fileID: 8551513206026307332, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
+      propertyPath: m_Options.m_Options.Array.data[1].m_Text
+      value: Option C
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb75e730b4ed77540ab1c8c5dcbf42d6, type: 3}
